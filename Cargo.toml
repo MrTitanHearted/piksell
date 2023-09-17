@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+    "piksellar",
+    "piksellar_derive",
+    "examples/*"
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.0.1"
+rust-version = "1.72.0"
+keywords = ["graphics", "wgpu", "webgpu"]
+license = "MIT"
+repository = "https://github.com/MrTitanHearted/piksellar"
+authors = ["MrTitanHearted"]
