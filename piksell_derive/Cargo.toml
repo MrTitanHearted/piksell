@@ -1,5 +1,5 @@
 [package]
-name = "piksellar"
+name = "piksell_derive"
 edition.workspace = true
 version.workspace = true
 rust-version.workspace = true
@@ -11,12 +11,3 @@ authors.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-wgpu = { version = "0.17.0", features = ["naga"] }
-
-[features]
-default = []
-webgl = ["wgpu/webgl"]
-glsl = ["wgpu/glsl"]
-spirv = ["wgpu/spirv"]
-vulkan = ["wgpu/wgc"]
-serde = ["wgpu/serde"]

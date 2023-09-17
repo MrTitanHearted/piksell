@@ -1,9 +1,9 @@
-use crate::macros::piksellar_wrapper;
+use crate::macros::piksell_wrapper;
 
-piksellar_wrapper!{PiksellarDevice, wgpu::Device}
+piksell_wrapper!{PiksellDevice, wgpu::Device}
 
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq, PartialOrd, Ord)]
-pub struct PiksellarSize<T>
+pub struct PiksellSize<T>
 where
     T: Sized,
 {
@@ -11,7 +11,7 @@ where
     pub height: T,
 }
 
-impl<T> PiksellarSize<T>
+impl<T> PiksellSize<T>
 where
     T: Sized,
 {

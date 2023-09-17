@@ -1,5 +1,5 @@
 #[macro_export]
-macro_rules! piksellar_wrapper {
+macro_rules! piksell_wrapper {
     ($wrapper_type:ident, $render_resource_type:ty) => {
         #[derive(Debug, Clone)]
         pub struct $wrapper_type(std::sync::Arc<$render_resource_type>);
@@ -35,7 +35,7 @@ macro_rules! piksellar_wrapper {
 }
 
 #[macro_export]
-macro_rules! piksellar_id {
+macro_rules! piksell_id {
     ($atomic_id_type:ident) => {
         #[derive(Debug, Clone, Copy, Hash, Eq, PartialEq)]
         pub struct $atomic_id_type(core::num::NonZeroU32);
@@ -53,4 +53,4 @@ macro_rules! piksellar_id {
     }
 }
 
-pub use piksellar_wrapper;
+pub use piksell_wrapper;

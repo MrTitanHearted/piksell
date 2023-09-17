@@ -14,4 +14,4 @@ authors.workspace = true
 tokio = { version = "1.32.0", features = ["full"] }
 winit = "0.28.6"
 winit_input_helper = "0.14.1"
-piksellar = {path = "../../piksellar"}
+piksell = {path = "../../piksell"}
