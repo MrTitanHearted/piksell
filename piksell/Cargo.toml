@@ -11,7 +11,10 @@ authors.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-wgpu = { version = "0.17.0", features = ["naga"] }
+anyhow = "1.0.75"
+naga = "0.13.0"
+raw-window-handle = "0.5.2"
+wgpu = { version = "0.17.1", features = ["naga"] }
 
 [features]
 default = []

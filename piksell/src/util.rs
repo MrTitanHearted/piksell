@@ -1,21 +1,27 @@
-use crate::macros::piksell_wrapper;
+pub type PiksellBackends = wgpu::Backends;
+pub type PiksellDx12Compiler = wgpu::Dx12Compiler;
+pub type PiksellPowerPreference = wgpu::PowerPreference;
+pub type PiksellDeviceFeatures = wgpu::Features;
+pub type PiksellDeviceLimits = wgpu::Limits;
+pub type PiksellSurfaceCapabilities = wgpu::SurfaceCapabilities;
+pub type PiksellSurfaceConfiguration = wgpu::SurfaceConfiguration;
+pub type PiksellTextureFormat = wgpu::TextureFormat;
+pub type PiksellPresentMode = wgpu::PresentMode;
+pub type PiksellAlphaMode = wgpu::CompositeAlphaMode;
 
-piksell_wrapper!{PiksellDevice, wgpu::Device}
+pub type PiksellTextureUsages = wgpu::TextureUsages;
+
+pub type PiksellColor = wgpu::Color;
+
 
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq, PartialOrd, Ord)]
-pub struct PiksellSize<T>
-where
-    T: Sized,
-{
-    pub width: T,
-    pub height: T,
+pub struct PiksellSize {
+    pub width: u32,
+    pub height: u32,
 }
 
-impl<T> PiksellSize<T>
-where
-    T: Sized,
-{
-    pub fn new(width: T, height: T) -> Self {
+impl PiksellSize {
+    pub fn new(width: u32, height: u32) -> Self {
         Self {
             width, height
         }
